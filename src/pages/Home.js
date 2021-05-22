@@ -160,27 +160,17 @@ const Home = (artist, activeArtistId) => {
         _getArtists();
     }, [])  
 
-
-
     return (
-        <div className="container HOMEE">
-            <div className="card margin-bottom-20">
-                <div className="card-body">
-                    <div className="row">
-                        <div className="col-md-9 order-md-1">
-                            {artists.map((artist) =>
-                                <div className="card">
-                                    <img src={artist.picture} class="card-img-top" alt="card-img-top" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">{artist.name}</h5>
-                                        <p className="card-text"><small className="text-muted">2323 Fans</small></p>
-                                    </div>
-                                </div>                                   
-                            )}  
-                        </div>                     
+        <div className="container home">
+            {artists.map((artist) =>
+                <div className="card mb-3" key={artist.id}>
+                    <img src={artist.picture} className="card-img-top" alt="card-img-top" />
+                    <div className="card-body">
+                        <h5 className="card-title">{artist.name}</h5>
+                        <p className="card-text"><small className="text-muted">2323 Fans</small></p>
                     </div>
-                </div>                
-            </div>
+                </div>                                   
+            )}  
         </div>
     )
 }
