@@ -11,11 +11,11 @@ export function getArtist(id) {
 }
 
 export function getArtistAlbums(artistName) {
-  return axios.get('http://cors-anywhere.herokuapp.com/api.deezer.com/search/album?q=' + artistName)
+  return axios.get('http://cors-anywhere.herokuapp.com/api.deezer.com/search/album?q=' + artistName +'&limit=10')
     .then(res => res.data)
 }
 
 export function getArtistTracks(id) {
-  return axios.get('http://cors-anywhere.herokuapp.com/api.deezer.com/' + id + '/top?limit=10')
+  return axios.get('http://cors-anywhere.herokuapp.com/api.deezer.com/artist/' + id + '/top?limit=10')
     .then(res => res.data)
 }

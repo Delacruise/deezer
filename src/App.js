@@ -17,7 +17,7 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/ArtistDetail">
+          <Route path="/ArtistDetail/:artistId">
             <ArtistDetail />
           </Route>
           <Route path="/">
