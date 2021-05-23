@@ -1,0 +1,28 @@
+.artistDetail {
+
+    .section1 {
+        max-height: 300px;
+        overflow: hidden;  
+    }
+
+    .imageContainer {
+        position: relative;
+
+        .imageFloaterContainer {
+            position:absolute;
+            left: 40px;
+            top: 60px;
+            color: #fff !important;
+        }
+    }  
+    
+    .albums {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-around;
+
+        img {
+            max-width:min-content;
+        }
+    }
+}

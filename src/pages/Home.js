@@ -5,7 +5,6 @@ const Home = (artist, activeArtistId) => {
 
     const [selectedArtist, setSelectedArtist] = useState();
     const [artists, setArtists] = useState([]);
-    const [isDetailView, setDetailView] = useState(true);
 
     useEffect(() => {
         async function _getArtists() {
@@ -164,7 +163,7 @@ const Home = (artist, activeArtistId) => {
         <div className="container home">
             {artists.map((artist) =>
                 <div className="card mb-3" key={artist.id}>
-                    <img src={artist.picture} className="card-img-top" alt="card-img-top" />
+                    <img src={artist.picture_medium} className="card-img-top" alt="card-img-top" />
                     <div className="card-body">
                         <h5 className="card-title">{artist.name}</h5>
                         <p className="card-text"><small className="text-muted">2323 Fans</small></p>
