@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 
 import { getArtist } from '../api/index';
 import { getArtistTracks } from '../api/index';
 import { getArtistAlbums } from '../api/index';
 
-const ArtistDetail = (artistID) => {
+const ArtistDetail = () => {
   const [artist, setArtist] = useState([]);
   const [artistAlbums, setArtistAlbums] = useState([]);
   const [artistTracks, setArtistTracks] = useState([]);

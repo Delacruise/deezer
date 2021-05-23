@@ -20,6 +20,9 @@ const App = () => {
           <Route path="/ArtistDetail/:artistId">
             <ArtistDetail />
           </Route>
+          <Route path="/Search/:artistName">
+            <Search />
+          </Route>
           <Route path="/">
             <Home />
           </Route>

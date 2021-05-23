@@ -19,3 +19,8 @@ export function getArtistTracks(id) {
   return axios.get('http://cors-anywhere.herokuapp.com/api.deezer.com/artist/' + id + '/top?limit=10')
     .then(res => res.data)
 }
+
+export function searchArtists(artistName) {
+  return axios.get('http://cors-anywhere.herokuapp.com/api.deezer.com/search/artist?q=' + artistName )
+    .then(res => res.data)
+}

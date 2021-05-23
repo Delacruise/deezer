@@ -1,6 +1,18 @@
 import React from 'react';
+import { Redirect } from 'react-router';
 
 const Header = () => {
+
+  let textInput = React.createRef();
+  const searchFunction = () => { 
+    console.log(textInput.current.value);
+    var toSearch = textInput.current.value;
+    if(textInput.current.value !== '') {
+      if(toSearch !== '') {
+        window.location.replace("http://localhost:3000/Search/" + toSearch);
+      }
+    }
+  }
 
   return (
     <div className="container-fluid header">
@@ -12,8 +24,8 @@ const Header = () => {
         </div>
         <div className="col">
           <div className="input-group">
-            <input type="text" className="form-control" placeholder="search" aria-label="search" aria-describedby="input-group-right" />
-            <span className="input-group-text" id="input-group-right-example">Search</span>
+            <input type="text" ref={textInput} name="search" className="form-control" placeholder="Search Artist..." aria-label="search" aria-describedby="input-group-right" />
+            <span onClick={searchFunction} className="input-group-text searchButton" id="searchButton">Search</span>
           </div>
         </div>
       </div>
